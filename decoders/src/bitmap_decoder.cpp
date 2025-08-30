@@ -50,8 +50,8 @@ void Bitmap::pixelFormat(PixelFormat format)
     auto toBytes = std::unique_ptr<uint8_t[]>(new uint8_t[allocSize]);
 
     // Copy into the new pixel buffer.
-    int writeIndex = 0;
-    int readIndex = 0;
+    size_t writeIndex = 0;
+    size_t readIndex = 0;
     for (size_t i = 0; i < imageNumPixels; i++)
     {
         for (size_t j = 0; j < toBytesPerPixel; j++)
